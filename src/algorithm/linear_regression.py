@@ -124,55 +124,18 @@ def draw_h(data: DataFrame, goal: np.ndarray):
     plt.show()
 
 
-
-
 def deal_ex1():
     path = 'ex1data1.txt'
     data = pd.read_csv(path, header=None, names=['Population', 'Profit'])
     LinearRegression(data)
-
-    # print(data.head())
-    # print(data.describe())
-    # draw_raw_data(data)
-    # # 插入一列来x₀方便向量化计算
-    # data.insert(0, 'Ones', 1)
-    # cols = data.shape[1]        # 获取数据的总列数
-    # X = data.iloc[:, 0:cols - 1]  # X是所有行，去掉最后一列
-    # y = data.iloc[:, cols - 1:cols]  # y是所有行的最后一列
-    # X = np.array(X.values)      # (m * n)
-    # y = np.array(y.values)      # (m * 1)
-    # # 列向量 (n * 1)
-    # theta = np.array([[0, 0]], dtype=float).T
-    # # theta = np.array([0, 0]).reshape((-1, 1))
-    # print(compute_cost_d(X, y, theta))
-    # goal, costs = gradient_decent(X, y, theta, alpha=0.01, iter_num=1000)
-    # draw_h(data, goal)
-    # draw_cost(costs)
 
 
 def deal_ex2():
     path = 'ex1data2.txt'
     data = pd.read_csv(path, header=None, names=['Size', 'RoomNum', 'Price'])
     LinearRegression(data)
-    # 特征缩放
-    # data = (data - data.mean()) / data.std()
-    # print(data.head())
-    # # 插入一列来x₀方便向量化计算
-    # data.insert(0, 'Ones', 1)
-    # cols = data.shape[1]        # 获取数据的总列数
-    # X = data.iloc[:, 0:cols - 1]  # X是所有行，去掉最后一列
-    # y = data.iloc[:, cols - 1:cols]  # y是所有行的最后一列
-    # X = np.array(X.values)      # (m * n)
-    # y = np.array(y.values)      # (m * 1)
-    # # 列向量 (n * 1)
-    # theta = np.array([[0, 0, 0]], dtype=float).T
-    # # theta = np.array([0, 0]).reshape((-1, 1))
-    # print(compute_cost_d(X, y, theta))
-    # goal, costs = gradient_decent(X, y, theta, alpha=0.01, iter_num=1000)
-    # # draw_h(data, goal)
-    # draw_cost(costs)
-
 
 
 if __name__ == '__main__':
     deal_ex1()
+    # deal_ex2()
